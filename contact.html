@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Get in touch with Turnstone LTD - Contact us for inquiries and collaboration opportunities">
+  <meta name="keywords" content="Turnstone, contact, email, get in touch">
+  <meta name="author" content="Turnstone LTD">
+
+  <title>Contact Us - Turnstone LTD</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Favicon (optional - add later) -->
+  <!-- <link rel="icon" type="image/png" href="assets/images/favicon.png"> -->
+
+  <style>
+    /* Additional styles for contact form */
+    .contact-content {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-xl);
+      margin-top: var(--space-xl);
+    }
+
+    @media (min-width: 768px) {
+      .contact-content {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .contact-info {
+      background-color: var(--color-background-alt);
+      padding: var(--space-lg);
+      border-radius: var(--border-radius);
+    }
+
+    .contact-info h3 {
+      margin-bottom: var(--space-md);
+    }
+
+    .contact-info p {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-sm);
+      margin-bottom: var(--space-md);
+    }
+
+    .contact-info strong {
+      min-width: 80px;
+      color: var(--color-primary);
+    }
+
+    .form-group {
+      margin-bottom: var(--space-md);
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: var(--space-xs);
+      font-weight: 600;
+      color: var(--color-primary);
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: var(--space-sm);
+      border: 1px solid var(--color-border);
+      border-radius: var(--border-radius-sm);
+      font-family: var(--font-sans);
+      font-size: var(--font-size-base);
+      transition: border-color var(--transition-fast);
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--color-accent);
+    }
+
+    .form-group textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    .form-note {
+      font-size: var(--font-size-sm);
+      color: var(--color-text-light);
+      margin-top: var(--space-xs);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo">Turnstone LTD</a>
+
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="hero">
+    <div class="container-narrow">
+      <h1>Get in Touch</h1>
+      <p>We'd love to hear from you. Reach out to discuss your project or learn more about our services.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section">
+    <div class="container-narrow">
+      <div class="contact-content">
+
+        <!-- Contact Information -->
+        <div class="contact-info">
+          <h3>Contact Information</h3>
+
+          <p>
+            <strong>Email:</strong>
+            <a href="mailto:info@turnstone.ltd">info@turnstone.ltd</a>
+          </p>
+
+          <!-- Uncomment and add your information -->
+          <!--
+          <p>
+            <strong>Phone:</strong>
+            <span>+1 (555) 123-4567</span>
+          </p>
+
+          <p>
+            <strong>Address:</strong>
+            <span>123 Business Street<br>City, State 12345<br>Country</span>
+          </p>
+
+          <p>
+            <strong>Hours:</strong>
+            <span>Monday - Friday<br>9:00 AM - 5:00 PM</span>
+          </p>
+          -->
+
+          <div style="margin-top: var(--space-lg);">
+            <h4 style="margin-bottom: var(--space-sm);">Follow Us</h4>
+            <!-- Add your social media links here -->
+            <p class="text-light" style="font-size: var(--font-size-sm);">
+              Connect with us on social media for updates and insights.
+            </p>
+            <!-- Example social links (uncomment and customize):
+            <div style="display: flex; gap: var(--space-md); margin-top: var(--space-sm);">
+              <a href="https://linkedin.com/company/turnstone" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a href="https://twitter.com/turnstoneltd" target="_blank" rel="noopener noreferrer">Twitter</a>
+              <a href="https://github.com/turnstone" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+            -->
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div>
+          <h3>Send Us a Message</h3>
+          <form id="contact-form">
+            <div class="form-group">
+              <label for="name">Name *</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject">
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+
+            <p class="form-note">
+              * Required fields. Note: This form currently uses client-side validation only.
+              To enable email delivery, you'll need to integrate with a backend service like
+              <a href="https://formspree.io" target="_blank" rel="noopener noreferrer">Formspree</a> or
+              <a href="https://netlify.com/products/forms" target="_blank" rel="noopener noreferrer">Netlify Forms</a>.
+            </p>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="section section-alt">
+    <div class="container-narrow text-center">
+      <h2>Ready to Start Your Project?</h2>
+      <p>Let's collaborate to turn your vision into reality. Contact us today to discuss your needs.</p>
+      <div class="btn-group mt-lg">
+        <a href="services.html" class="btn btn-primary">View Our Services</a>
+        <a href="about.html" class="btn btn-secondary">Learn More About Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; <span id="current-year"></span> Turnstone LTD. All rights reserved.</p>
+      <p>
+        <a href="about.html">About</a> |
+        <a href="services.html">Services</a> |
+        <a href="contact.html">Contact</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>

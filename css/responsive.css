@@ -1,0 +1,258 @@
+/* ================================
+   Turnstone LTD - Responsive Styles
+   Mobile-First Media Queries
+   ================================ */
+
+/* ================================
+   Mobile (Default)
+   < 768px
+   ================================ */
+
+/* Show mobile menu toggle on mobile */
+@media (max-width: 767px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background-color: var(--color-background);
+    border-bottom: 1px solid var(--color-border);
+    padding: var(--space-lg);
+    gap: var(--space-md);
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-base);
+    box-shadow: var(--shadow-md);
+  }
+
+  .nav.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* Mobile menu toggle animation */
+  .menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+  }
+
+  /* Hero adjustments */
+  .hero h1 {
+    font-size: var(--font-size-3xl);
+  }
+
+  .hero p {
+    font-size: var(--font-size-base);
+  }
+
+  /* Button adjustments */
+  .btn-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Section spacing */
+  .section {
+    padding: var(--space-2xl) 0;
+  }
+
+  /* Typography adjustments */
+  h1 {
+    font-size: var(--font-size-3xl);
+  }
+
+  h2 {
+    font-size: var(--font-size-2xl);
+  }
+
+  h3 {
+    font-size: var(--font-size-xl);
+  }
+
+  /* Container padding */
+  .container,
+  .container-narrow {
+    padding: 0 var(--space-md);
+  }
+
+  /* Card grid - single column on mobile */
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ================================
+   Tablet
+   768px - 1023px
+   ================================ */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Hide menu toggle, show full nav */
+  .menu-toggle {
+    display: none;
+  }
+
+  .nav {
+    display: flex;
+  }
+
+  /* Hero adjustments */
+  .hero h1 {
+    font-size: var(--font-size-4xl);
+  }
+
+  /* Card grid - 2 columns on tablet */
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Section spacing */
+  .section {
+    padding: var(--space-3xl) 0;
+  }
+}
+
+/* ================================
+   Desktop
+   >= 1024px
+   ================================ */
+
+@media (min-width: 1024px) {
+  /* Hide menu toggle, show full nav */
+  .menu-toggle {
+    display: none;
+  }
+
+  .nav {
+    display: flex;
+  }
+
+  /* Larger hero text */
+  .hero h1 {
+    font-size: calc(var(--font-size-4xl) + 0.5rem);
+  }
+
+  .hero p {
+    font-size: var(--font-size-xl);
+  }
+
+  /* Card grid - 3 columns on desktop */
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Button group - horizontal on desktop */
+  .btn-group {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  /* Hover effects only on devices that support hover */
+  @media (hover: hover) {
+    .card:hover {
+      transform: translateY(-8px);
+    }
+  }
+}
+
+/* ================================
+   Large Desktop
+   >= 1440px
+   ================================ */
+
+@media (min-width: 1440px) {
+  :root {
+    --font-size-base: 18px;
+  }
+
+  .container {
+    max-width: 1400px;
+  }
+}
+
+/* ================================
+   Print Styles
+   ================================ */
+
+@media print {
+  .header,
+  .footer,
+  .menu-toggle,
+  .btn {
+    display: none;
+  }
+
+  .section {
+    padding: var(--space-md) 0;
+  }
+
+  body {
+    color: black;
+  }
+
+  a {
+    color: black;
+    text-decoration: underline;
+  }
+}
+
+/* ================================
+   Reduced Motion
+   ================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ================================
+   Dark Mode Support (Future)
+   ================================ */
+
+@media (prefers-color-scheme: dark) {
+  /* Uncomment to enable dark mode in the future */
+  /*
+  :root {
+    --color-primary: #f5f5f5;
+    --color-secondary: #d4d4d4;
+    --color-background: #1a1a1a;
+    --color-background-alt: #2a2a2a;
+    --color-border: #404040;
+    --color-text: #f5f5f5;
+    --color-text-light: #a3a3a3;
+  }
+
+  .header {
+    background-color: var(--color-background);
+  }
+
+  .card {
+    background-color: var(--color-background-alt);
+  }
+  */
+}
