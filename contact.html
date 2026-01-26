@@ -196,13 +196,9 @@
             </div>
 
             <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
-
+            <div id="form-status" style="margin-top: 1rem; display: none;"></div>
             <p class="form-note">
-              * Required fields. Note: This form currently uses client-side validation only.
-              To enable email delivery, you'll need to integrate with a backend service like
-              <a href="https://formspree.io" target="_blank" rel="noopener noreferrer">Formspree</a> or
-              <a href="https://netlify.com/products/forms" target="_blank" rel="noopener noreferrer">Netlify Forms</a>.
-            </p>
+                </p>
           </form>
         </div>
 
@@ -234,8 +230,21 @@
     </div>
   </footer>
 
-  <!-- JavaScript -->
+<!-- JavaScript -->
   <script src="js/main.js"></script>
+
+  <!-- Contact Form Handler -->
+  <script>
+  document.getElementById('contact-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    
+    const statusDiv = document.getElementById('form-status');
+    const submitButton = this.querySelector('button[type="submit"]');
+    
+    // ... rest of the JavaScript code I provided ...
+  });
+  </script>
 
 </body>
 </html>
+
