@@ -1,79 +1,178 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Turnstone LTD - Professional consulting services and technology solutions">
-  <meta name="keywords" content="Turnstone, consulting, technology, services">
-  <meta name="author" content="Turnstone LTD">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sons of Liberty - Filii Libertatis">
+    <title>Sons of Liberty | Filii Libertatis</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        /* Additional styles for the home page */
+        .hero {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
 
-  <title>Turnstone LTD - Home</title>
+```
+    .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        font-weight: 700;
+    }
 
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/responsive.css">
+    .hero p {
+        font-size: 1.2rem;
+        opacity: 0.95;
+        max-width: 600px;
+        margin: 0 auto;
+    }
 
-  <!-- Favicon (optional - add later) -->
-  <!-- <link rel="icon" type="image/png" href="assets/images/favicon.png"> -->
+    .apps-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 4rem 2rem;
+    }
+
+    .apps-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    .app-card {
+        background: white;
+        border-radius: 12px;
+        padding: 2rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-decoration: none;
+        color: inherit;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 2px solid transparent;
+    }
+
+    .app-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        border-color: #667eea;
+    }
+
+    .app-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: #1a1a1a;
+    }
+
+    .app-card p {
+        color: #6b7280;
+        line-height: 1.6;
+    }
+
+    .app-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        display: block;
+    }
+
+    @media (max-width: 768px) {
+        .hero h1 {
+            font-size: 2rem;
+        }
+
+        .apps-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+```
+
 </head>
 <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Filii Libertatis</a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="photos.html">Photos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
-  <!-- Header / Navigation -->
-  <header class="header">
-    <div class="container">
-      <a href="index.html" class="logo">Turnstone LTD</a>
+```
+<!-- Hero Section -->
+<section class="hero">
+    <h1>Sons of Liberty</h1>
+    <p>Filii Libertatis - Brothers in Liberty</p>
+</section>
 
-      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+<!-- Apps Section -->
+<section class="apps-container">
+    <div class="apps-grid">
+        <a href="https://golf.filiilibertatis.com/" class="app-card" target="_blank" rel="noopener noreferrer">
+            <span class="app-icon">⛳</span>
+            <h3>SOL Golf Scoring App</h3>
+            <p>Track and manage golf tournament scores with our comprehensive scoring system.</p>
+        </a>
 
-      <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+        <a href="https://cornhole.filiilibertatis.com/" class="app-card" target="_blank" rel="noopener noreferrer">
+            <span class="app-icon">🎯</span>
+            <h3>SOL Cornhole App</h3>
+            <p>Manage cornhole tournaments and track game results for all your events.</p>
+        </a>
+
+        <a href="photos.html" class="app-card">
+            <span class="app-icon">📸</span>
+            <h3>Photo Albums</h3>
+            <p>Browse our collection of memories, events, and moments from the Sons of Liberty.</p>
+        </a>
     </div>
-  </header>
+</section>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="container">
-      <h1>Welcome to Turnstone LTD</h1>
-      <p>Delivering exceptional consulting services and innovative technology solutions tailored to your needs.</p>
-      <div class="btn-group">
-        <a href="services.html" class="btn btn-primary">Our Services</a>
-        <a href="contact.html" class="btn btn-secondary">Get in Touch</a>
-      </div>
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Filii Libertatis</h3>
+            <p>Sons of Liberty</p>
+        </div>
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="photos.html">Photos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Applications</h4>
+            <ul>
+                <li><a href="https://golf.filiilibertatis.com/" target="_blank" rel="noopener">Golf Scoring</a></li>
+                <li><a href="https://cornhole.filiilibertatis.com/" target="_blank" rel="noopener">Cornhole App</a></li>
+            </ul>
+        </div>
     </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section class="section">
-    <div class="container-narrow text-center">
-      <div class="btn-group">
-        <a href="https://codes.turnstone.ltd" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Medical Code Set Builder</a>
-        <a href="https://mcsbumls.turnstone.ltd" class="btn btn-primary" target="_blank" rel="noopener noreferrer">UMLS Medical Code Set Builder</a>
-      </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Filii Libertatis. All rights reserved.</p>
     </div>
-  </section>
+</footer>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; <span id="current-year"></span> Turnstone LTD. All rights reserved.</p>
-      <p>
-        <a href="about.html">About</a> |
-        <a href="services.html">Services</a> |
-        <a href="contact.html">Contact</a>
-      </p>
-    </div>
-  </footer>
-
-  <!-- JavaScript -->
-  <script src="js/main.js"></script>
+<script src="js/main.js"></script>
+```
 
 </body>
 </html>
