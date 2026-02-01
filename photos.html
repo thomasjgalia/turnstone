@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sons of Liberty Photo Albums - Browse our collection of memories and events">
+    <title>Photo Albums | Sons of Liberty</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        /* Photo Albums Specific Styles */
+        .photos-hero {
+            text-align: center;
+            padding: 4rem 2rem 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+```
+    .photos-hero h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        font-weight: 700;
+    }
+
+    .photos-hero p {
+        font-size: 1.1rem;
+        opacity: 0.95;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .albums-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 3rem 2rem;
+    }
+
+    .album-card {
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        margin-bottom: 3rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .album-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .album-header {
+        padding: 1.5rem 2rem;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+    }
+
+    .album-header h2 {
+        margin: 0 0 0.5rem 0;
+        font-size: 1.8rem;
+        font-weight: 600;
+    }
+
+    .album-meta {
+        display: flex;
+        gap: 1.5rem;
+        font-size: 0.9rem;
+        opacity: 0.95;
+        flex-wrap: wrap;
+    }
+
+    .album-meta span {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .album-embed {
+        position: relative;
+        width: 100%;
+        height: 600px;
+        background: #f5f5f5;
+    }
+
+    .album-embed iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    .album-actions {
+        padding: 1.5rem 2rem;
+        background: #f9fafb;
+        border-top: 1px solid #e5e7eb;
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.75rem 1.5rem;
+        border-radius: 8px;
+        font-weight: 500;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        border: none;
+        font-size: 0.95rem;
+    }
+
+    .btn-primary {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+    }
+
+    .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(102, 126, 234, 0.3);
+    }
+
+    .btn-secondary {
+        background: white;
+        color: #374151;
+        border: 2px solid #e5e7eb;
+    }
+
+    .btn-secondary:hover {
+        background: #f9fafb;
+        border-color: #d1d5db;
+    }
+
+    .no-albums {
+        text-align: center;
+        padding: 4rem 2rem;
+        color: #6b7280;
+    }
+
+    .no-albums svg {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 1rem;
+        opacity: 0.5;
+    }
+
+    @media (max-width: 768px) {
+        .photos-hero h1 {
+            font-size: 2rem;
+        }
+
+        .album-embed {
+            height: 400px;
+        }
+
+        .album-header h2 {
+            font-size: 1.4rem;
+        }
+
+        .album-actions {
+            flex-direction: column;
+        }
+
+        .btn {
+            width: 100%;
+            justify-content: center;
+        }
+    }
+
+    /* Loading animation */
+    .loading {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 400px;
+        color: #9ca3af;
+    }
+
+    .loading::after {
+        content: "Loading album...";
+        animation: pulse 1.5s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.5; }
+    }
+</style>
+```
+
+</head>
+<body>
+    <!-- Navigation (same as other pages) -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Filii Libertatis</a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="photos.html" class="active">Photos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+```
+<!-- Hero Section -->
+<section class="photos-hero">
+    <h1>📸 Photo Albums</h1>
+    <p>Browse our collection of memories, events, and moments from the Sons of Liberty</p>
+</section>
+
+<!-- Albums Container -->
+<div class="albums-container">
+    
+    <!-- Album 1: 2020, SOL November -->
+    <article class="album-card">
+        <div class="album-header">
+            <h2>2020, SOL November</h2>
+            <div class="album-meta">
+                <span>📅 November 2020</span>
+                <span>👤 Shared by Tom Galia</span>
+            </div>
+        </div>
+        <div class="album-embed">
+            <iframe 
+                src="https://photos.google.com/share/AF1QipMYfony70ZCQYZg_sEXBJOe-9IdEPiFYDsIX-MXPPQX9zmm7BxPRs1TmcnF8ryRBA?key=Z1hZMUcwZ0ctYlFNbU5HblI0NnpGX0swTkpERzJ3&hl=en&source=embed"
+                allowfullscreen
+                loading="lazy">
+            </iframe>
+        </div>
+        <div class="album-actions">
+            <a href="https://photos.app.goo.gl/EvdvTGYTnyE4kCyu7" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="btn btn-primary">
+                🔗 Open in Google Photos
+            </a>
+            <button class="btn btn-secondary" onclick="shareAlbum('https://photos.app.goo.gl/EvdvTGYTnyE4kCyu7')">
+                📤 Share Album
+            </button>
+        </div>
+    </article>
+
+    <!-- Add more albums here following the same structure -->
+    <!-- Example placeholder for future albums: -->
+    <!--
+    <article class="album-card">
+        <div class="album-header">
+            <h2>Album Title Here</h2>
+            <div class="album-meta">
+                <span>📅 Month Year</span>
+                <span>👤 Shared by Name</span>
+            </div>
+        </div>
+        <div class="album-embed">
+            <iframe 
+                src="YOUR_GOOGLE_PHOTOS_EMBED_URL_HERE"
+                allowfullscreen
+                loading="lazy">
+            </iframe>
+        </div>
+        <div class="album-actions">
+            <a href="YOUR_ALBUM_SHARE_LINK" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="btn btn-primary">
+                🔗 Open in Google Photos
+            </a>
+            <button class="btn btn-secondary" onclick="shareAlbum('YOUR_ALBUM_SHARE_LINK')">
+                📤 Share Album
+            </button>
+        </div>
+    </article>
+    -->
+
+</div>
+
+<!-- Footer (same as other pages) -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Filii Libertatis</h3>
+            <p>Sons of Liberty</p>
+        </div>
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="photos.html">Photos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Applications</h4>
+            <ul>
+                <li><a href="https://golf.filiilibertatis.com/" target="_blank" rel="noopener">Golf Scoring</a></li>
+                <li><a href="https://cornhole.filiilibertatis.com/" target="_blank" rel="noopener">Cornhole App</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Filii Libertatis. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+    // Share functionality
+    async function shareAlbum(url) {
+        if (navigator.share) {
+            try {
+                await navigator.share({
+                    title: 'SOL Photo Album',
+                    text: 'Check out this Sons of Liberty photo album!',
+                    url: url
+                });
+            } catch (err) {
+                if (err.name !== 'AbortError') {
+                    copyToClipboard(url);
+                }
+            }
+        } else {
+            copyToClipboard(url);
+        }
+    }
+
+    function copyToClipboard(text) {
+        navigator.clipboard.writeText(text).then(() => {
+            alert('Album link copied to clipboard!');
+        }).catch(err => {
+            console.error('Failed to copy:', err);
+        });
+    }
+</script>
+```
+
+</body>
+</html>
