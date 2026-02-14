@@ -175,6 +175,14 @@ a:hover {
   font-size: var(--font-size-xl);
   font-weight: 700;
   color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.logo-img {
+  height: 36px;
+  width: auto;
 }
 
 .nav {
@@ -219,9 +227,6 @@ a:hover {
 }
 
 /* Mobile Menu Toggle - Always Visible */
-.header .menu-toggle {
-  order: -1;
-}
 
 .menu-toggle {
   display: flex;
@@ -257,6 +262,12 @@ a:hover {
   text-align: center;
 }
 
+.hero-logo {
+  width: 150px;
+  height: auto;
+  margin-bottom: var(--space-lg);
+}
+
 .hero h1 {
   margin-bottom: var(--space-sm);
 }
@@ -286,24 +297,24 @@ a:hover {
 
 .btn-primary {
   background-color: white;
-  color: var(--color-accent);
-  border: 2px solid var(--color-accent);
+  color: var(--color-secondary);
+  border: 2px solid var(--color-border);
 }
 
 .btn-primary:hover {
-  background-color: white;
-  color: var(--color-accent);
+  background-color: var(--color-background-alt);
+  color: var(--color-primary);
 }
 
 .btn-secondary {
   background-color: white;
-  color: var(--color-accent);
-  border: 2px solid var(--color-accent);
+  color: var(--color-secondary);
+  border: 2px solid var(--color-border);
 }
 
 .btn-secondary:hover {
-  background-color: white;
-  color: var(--color-accent);
+  background-color: var(--color-background-alt);
+  color: var(--color-primary);
 }
 
 .btn-group {
