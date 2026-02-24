@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Get in touch with Turnstone LTD - Contact us for inquiries and collaboration opportunities">
-  <meta name="keywords" content="Turnstone, contact, email, get in touch">
+  <meta name="description" content="Turnstone LTD Projects - Medical Code Set Builder and UMLS Medical Code Set Builder tools for healthcare data professionals.">
+  <meta name="keywords" content="Turnstone, medical code set builder, UMLS, healthcare tools, ICD, SNOMED">
   <meta name="author" content="Turnstone LTD">
 
-  <title>Contact Us - Turnstone LTD</title>
+  <title>Projects - Turnstone LTD</title>
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="css/main.css">
@@ -15,32 +15,6 @@
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="images/turnstoneminimal.png">
-
-  <style>
-    .contact-info {
-      background-color: var(--color-background-alt);
-      padding: var(--space-lg);
-      border-radius: var(--border-radius);
-      max-width: 500px;
-      margin: var(--space-xl) auto 0;
-      text-align: center;
-    }
-
-    .contact-info h3 {
-      margin-bottom: var(--space-md);
-    }
-
-    .contact-info p {
-      justify-content: center;
-      gap: var(--space-sm);
-      margin-bottom: var(--space-md);
-    }
-
-    .contact-info strong {
-      min-width: 80px;
-      color: var(--color-primary);
-    }
-  </style>
 </head>
 <body>
 
@@ -62,7 +36,7 @@
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
-        <a href="projects.html">Projects</a>
+        <a href="projects.html" class="active">Projects</a>
         <a href="contact.html">Contact</a>
       </nav>
     </div>
@@ -71,20 +45,25 @@
   <!-- Page Header -->
   <section class="hero">
     <div class="container-narrow">
-      <h1>Get in Touch</h1>
+      <h1>Projects</h1>
+      <p>Healthcare data tools built by Turnstone LTD</p>
     </div>
   </section>
 
-  <!-- Contact Section -->
+  <!-- Projects -->
   <section class="section">
     <div class="container-narrow">
-      <div class="contact-info">
-        <h3>Contact Information</h3>
-        <p>
-          <strong>Email:</strong>
-          <a href="mailto:info@turnstone.ltd">info@turnstone.ltd</a>
-        </p>
-      </div>
+      <h2>Medical Code Set Builder <span style="font-size: 0.7em; color: var(--color-accent);">(Beta)</span></h2>
+      <p>Build and export custom medical code sets from standard vocabularies including ICD-10, CPT, HCPCS, and more. Designed for clinical researchers, data engineers, and healthcare analysts who need precise, reproducible code lists for OMOP and other CDM implementations.</p>
+      <a href="https://codes.turnstone.ltd" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Open Medical Code Set Builder</a>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container-narrow">
+      <h2>UMLS Medical Code Set Builder <span style="font-size: 0.7em; color: var(--color-accent);">(Beta)</span></h2>
+      <p>Search and build code sets using the Unified Medical Language System (UMLS), spanning over 200 medical vocabularies including SNOMED CT, RxNorm, LOINC, and MeSH. Ideal for cross-terminology mapping and concept-level cohort definitions.</p>
+      <a href="https://mcsbumls.turnstone.ltd" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Open UMLS Code Set Builder</a>
     </div>
   </section>
 
@@ -103,6 +82,6 @@
 
   <!-- JavaScript -->
   <script src="js/main.js"></script>
+
 </body>
 </html>
-
