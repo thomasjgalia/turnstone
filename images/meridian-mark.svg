@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" width="320" height="320">
+  <defs>
+    <clipPath id="globeClip">
+      <circle cx="160" cy="160" r="138"/>
+    </clipPath>
+
+    <linearGradient id="meridianGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a3a5c" stop-opacity="0.42"/>
+      <stop offset="50%" stop-color="#1a3a5c" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#1a3a5c" stop-opacity="0.42"/>
+    </linearGradient>
+  </defs>
+
+  <!-- White background -->
+  <rect width="320" height="320" fill="#ffffff"/>
+
+  <!-- Globe fill -->
+  <circle cx="160" cy="160" r="138" fill="#edf2f7"/>
+
+  <!-- Meridian plane — narrow vertical slice -->
+  <ellipse cx="160" cy="160" rx="62" ry="138" fill="url(#meridianGrad)" stroke="#1a3a5c" stroke-width="2" stroke-opacity="0.88"/>
+
+  <!-- Latitude lines clipped to globe -->
+  <g clip-path="url(#globeClip)" stroke="#1a3a5c" stroke-width="0.8" stroke-opacity="0.18" fill="none">
+    <ellipse cx="160" cy="160" rx="138" ry="35"/>
+    <ellipse cx="160" cy="125" rx="119" ry="30"/>
+    <ellipse cx="160" cy="91"  rx="69"  ry="18"/>
+    <ellipse cx="160" cy="195" rx="119" ry="30"/>
+    <ellipse cx="160" cy="229" rx="69"  ry="18"/>
+  </g>
+
+  <!-- Secondary meridian lines -->
+  <g clip-path="url(#globeClip)" stroke="#1a3a5c" stroke-width="0.75" stroke-opacity="0.13" fill="none">
+    <ellipse cx="160" cy="160" rx="138" ry="35" transform="rotate(55 160 160)"/>
+    <ellipse cx="160" cy="160" rx="138" ry="35" transform="rotate(125 160 160)"/>
+  </g>
+
+  <!-- Globe outline -->
+  <circle cx="160" cy="160" r="138" fill="none" stroke="#1a3a5c" stroke-width="2" stroke-opacity="0.6"/>
+
+  <!-- Polar axis — single continuous line, top-left to bottom-right, through globe -->
+  <line x1="104" y1="14" x2="216" y2="306" stroke="#1a3a5c" stroke-width="2.2" stroke-opacity="0.82"/>
+
+  
+
+  <!-- Fix point at center -->
+  <circle cx="160" cy="160" r="5" fill="none" stroke="#1a3a5c" stroke-width="2" stroke-opacity="0.9"/>
+  <circle cx="160" cy="160" r="2" fill="#1a3a5c" fill-opacity="0.85"/>
+
+</svg>

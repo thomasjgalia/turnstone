@@ -76,6 +76,13 @@ body {
   background-color: var(--color-background);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main, section, header ~ * {
+  flex: 1 0 auto;
 }
 
 /* ================================
@@ -379,23 +386,16 @@ a:hover {
    ================================ */
 
 .footer {
-  background-color: var(--color-primary);
+  background-color: #9ca3af;
   color: white;
   padding: var(--space-lg) 0;
   text-align: center;
+  flex-shrink: 0;
 }
 
 .footer p {
-  color: rgba(255, 255, 255, 0.8);
-  margin-bottom: var(--space-sm);
-}
-
-.footer a {
   color: white;
-}
-
-.footer a:hover {
-  color: var(--color-accent);
+  margin-bottom: 0;
 }
 
 /* ================================
