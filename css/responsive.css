@@ -78,6 +78,38 @@
 }
 
 /* ================================
+   Desktop Nav (inline, ≥768px)
+   ================================ */
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .nav {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    max-height: none;
+    overflow: visible;
+    background: none;
+    border-bottom: none;
+    padding: 0;
+    box-shadow: none;
+    gap: 0.125rem;
+  }
+
+  .nav a {
+    display: inline-block;
+    padding: 0.25rem 0.625rem;
+  }
+}
+
+/* ================================
    Tablet
    768px - 1023px
    ================================ */
@@ -126,12 +158,6 @@
     justify-content: center;
   }
 
-  /* Hover effects only on devices that support hover */
-  @media (hover: hover) {
-    .card:hover {
-      transform: translateY(-4px);
-    }
-  }
 }
 
 /* ================================
