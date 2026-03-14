@@ -7,79 +7,26 @@
 document.addEventListener('DOMContentLoaded', function() {
 
   // ================================
-  // Mobile Menu Toggle
+  // Sidebar Toggle
   // ================================
 
-  const menuToggle = document.querySelector('.menu-toggle');
-  const nav = document.querySelector('.nav');
+  const sidebar = document.getElementById('sidebar');
+  const sidebarToggle = document.getElementById('sidebarToggle');
 
-  if (menuToggle && nav) {
-    menuToggle.addEventListener('click', function() {
-      // Toggle active class on both menu toggle and nav
-      menuToggle.classList.toggle('active');
-      nav.classList.toggle('active');
-
-      // Update aria-expanded for accessibility
-      const isExpanded = nav.classList.contains('active');
-      menuToggle.setAttribute('aria-expanded', isExpanded);
-    });
-
-    // Close mobile menu when clicking a nav link
-    const navLinks = nav.querySelectorAll('a');
-    navLinks.forEach(link => {
-      link.addEventListener('click', function() {
-        if (window.innerWidth < 768) {
-          menuToggle.classList.remove('active');
-          nav.classList.remove('active');
-          menuToggle.setAttribute('aria-expanded', 'false');
-        }
-      });
-    });
-
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', function(event) {
-      const isClickInsideNav = nav.contains(event.target);
-      const isClickOnToggle = menuToggle.contains(event.target);
-
-      if (!isClickInsideNav && !isClickOnToggle && nav.classList.contains('active')) {
-        menuToggle.classList.remove('active');
-        nav.classList.remove('active');
-        menuToggle.setAttribute('aria-expanded', 'false');
-      }
+  if (sidebar && sidebarToggle) {
+    sidebarToggle.addEventListener('click', function() {
+      sidebar.classList.toggle('expanded');
     });
   }
 
   // ================================
-  // Header Scroll Effect
-  // ================================
-
-  const header = document.querySelector('.header');
-
-  if (header) {
-    let lastScroll = 0;
-
-    window.addEventListener('scroll', function() {
-      const currentScroll = window.pageYOffset;
-
-      // Add shadow when scrolled
-      if (currentScroll > 0) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
-
-      lastScroll = currentScroll;
-    });
-  }
-
-  // ================================
-  // Active Navigation Highlighting
+  // Active Sidebar Link Highlighting
   // ================================
 
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-  const navLinks = document.querySelectorAll('.nav a');
+  const sidebarLinks = document.querySelectorAll('.sidebar-link');
 
-  navLinks.forEach(link => {
+  sidebarLinks.forEach(link => {
     const linkPage = link.getAttribute('href');
     if (linkPage === currentPage || (currentPage === '' && linkPage === 'index.html')) {
       link.classList.add('active');

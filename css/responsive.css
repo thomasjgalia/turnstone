@@ -4,22 +4,6 @@
    Dense Design with Always-Visible Menu
    ================================ */
 
-/* ================================
-   All Screens - Menu Toggle Animation
-   ================================ */
-
-/* Mobile menu toggle animation - applies to all screen sizes */
-.menu-toggle.active span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-
-.menu-toggle.active span:nth-child(2) {
-  opacity: 0;
-}
-
-.menu-toggle.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(6px, -6px);
-}
 
 /* ================================
    Mobile (Default)
@@ -74,38 +58,6 @@
   /* Card grid - single column on mobile */
   .card-grid {
     grid-template-columns: 1fr;
-  }
-}
-
-/* ================================
-   Desktop Nav (inline, ≥768px)
-   ================================ */
-
-@media (min-width: 768px) {
-  .menu-toggle {
-    display: none;
-  }
-
-  .nav {
-    position: static;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    transform: none;
-    opacity: 1;
-    visibility: visible;
-    max-height: none;
-    overflow: visible;
-    background: none;
-    border-bottom: none;
-    padding: 0;
-    box-shadow: none;
-    gap: 0.125rem;
-  }
-
-  .nav a {
-    display: inline-block;
-    padding: 0.25rem 0.625rem;
   }
 }
 
