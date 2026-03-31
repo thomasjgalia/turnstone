@@ -599,16 +599,10 @@ a:hover {
 .cap-list li {
   color: var(--color-secondary);
   font-size: var(--font-size-base);
-  padding-left: var(--space-lg);
-  position: relative;
 }
 
 .cap-list li::before {
-  content: "–";
-  position: absolute;
-  left: 0;
-  color: var(--color-accent);
-  font-weight: 700;
+  content: "";
 }
 
 /* ================================
